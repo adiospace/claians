@@ -42,7 +42,7 @@ Get a list of clients, with options for searching, filtering, sorting, and pagin
 
     GET /clients
 
-**Examples:** 
+**Example:** 
   
     curl localhost:3000/clients
 
@@ -51,7 +51,7 @@ Get a list of clients, with options for searching, filtering, sorting, and pagin
 
     GET /clients?search={term}
 
-**Examples:** 
+**Example:** 
 
     curl localhost:3000/clients?search=EnemyInc
 
@@ -64,7 +64,7 @@ Get a list of clients, with options for searching, filtering, sorting, and pagin
 
 `title`, `email`, `company`, `email`
 
-**Examples:** 
+**Example:** 
 
     curl localhost:3000/clients?title=EnemyInc&email=greatest@enemyinc.com
 
@@ -81,7 +81,7 @@ Get a list of clients, with options for searching, filtering, sorting, and pagin
 
 `asc`, `desc` (default: `asc`)
 
-**Examples:**
+**Example:**
 
     curl localhost:3000/clients?sort=title,email:desc,company:asc
 
@@ -98,7 +98,7 @@ Get a list of clients, with options for searching, filtering, sorting, and pagin
 
 `perPage` must be smaller or equals with 50. (default: 50)
 
-**Examples:**
+**Example:**
 
     curl localhost:3000/clients?page=2:20
 
@@ -107,7 +107,7 @@ Get a list of clients, with options for searching, filtering, sorting, and pagin
 
     GET /clients/count
 
-**Examples:**
+**Example:**
 
     curl localhost:3000/clients/count
 
@@ -117,7 +117,7 @@ Get a list of clients, with options for searching, filtering, sorting, and pagin
     GET /clients/:id
 
 
-Examples: 
+Example: 
 
     curl localhost:3000/clients/4fbd032c36d989ec6f000001
 
@@ -136,7 +136,7 @@ Get an `imageId` by uploading a temp image. See *Upload temp images* below.
 
 For JSON data, make sure to send the `Content-Type: application/json` header.
 
-**Examples:** 
+**Example:** 
 
     curl -X POST -d title=enemyInc -d email=small@enemyinc.com \
     -d imageId=4fbd032c36d989ec6f000001 localhost:3000/clients
@@ -157,7 +157,7 @@ Get an `imageId` by uploading a temp image. See *Upload temp images* below.
 For JSON data, make sure to send the `Content-Type: application/json` header.
 
 
-**Examples:** 
+**Example:** 
 
     curl -X PUT -d title=enemyInc -d email=small@enemyinc.com \
     -d imageId=4fbd032c36d989ec6f000001 localhost:3000/clients/4fbd032c36d989ec6f000001
@@ -167,7 +167,7 @@ For JSON data, make sure to send the `Content-Type: application/json` header.
 
     DELETE /clients/:id
 
-**Examples:**
+**Example:**
 
     curl -X DELETE localhost:3000/clients/4fbd032c36d989ec6f000001
 
@@ -184,6 +184,6 @@ For JSON data, make sure to send the `Content-Type: application/json` header.
 
 Post with `Content-Type: multipart/form-data`.
 
-**Examples:**
+**Example:**
 
     curl -F image=@someimagefile.jpg localhost:3000/images
